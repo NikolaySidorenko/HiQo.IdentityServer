@@ -31,8 +31,6 @@ namespace HiQo.ConsoleClient
                 return;
             }
 
-
-           
             Console.WriteLine(tokenResponse.Json);
             Console.WriteLine("\n\n");
 
