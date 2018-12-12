@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2019
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiQo.IdentityServer", "HiQo.IdentityServer\HiQo.IdentityServer.csproj", "{B515355A-3D1D-4239-B6A1-007941067DD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiQo.WebApi", "HiQo.WebApi\HiQo.WebApi.csproj", "{B8C75AFC-211B-4E98-97AE-AFC35C80C284}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiQo.ConsoleClient", "HiQo.ConsoleClient\HiQo.ConsoleClient.csproj", "{1EED5194-BB92-4C1D-93F6-0FF8AC37ACFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B515355A-3D1D-4239-B6A1-007941067DD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B515355A-3D1D-4239-B6A1-007941067DD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B515355A-3D1D-4239-B6A1-007941067DD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B515355A-3D1D-4239-B6A1-007941067DD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8C75AFC-211B-4E98-97AE-AFC35C80C284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8C75AFC-211B-4E98-97AE-AFC35C80C284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8C75AFC-211B-4E98-97AE-AFC35C80C284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8C75AFC-211B-4E98-97AE-AFC35C80C284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EED5194-BB92-4C1D-93F6-0FF8AC37ACFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EED5194-BB92-4C1D-93F6-0FF8AC37ACFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EED5194-BB92-4C1D-93F6-0FF8AC37ACFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EED5194-BB92-4C1D-93F6-0FF8AC37ACFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2ED11E55-E64D-4876-A92E-D651358064A2}
+	EndGlobalSection
+EndGlobal
