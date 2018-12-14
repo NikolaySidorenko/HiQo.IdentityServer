@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Security.Claims;
+using IdentityModel;
 using IdentityServer4;
 using IdentityServer4.Models;
 using IdentityServer4.Test;
@@ -22,6 +24,17 @@ namespace HiQo.IdentityServer
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
+                //new IdentityResource()
+                //{
+                //    Name = "roles",
+                //    DisplayName = "Roles",
+                //    Description = "Allow the service access to your user roles.",
+                //    UserClaims = new[] { JwtClaimTypes.Role, ClaimTypes.Role },
+                //    ShowInDiscoveryDocument = true,
+                //    Required = true,
+                //    Emphasize = true
+
+                //}
             };
         }
 
@@ -61,12 +74,8 @@ namespace HiQo.IdentityServer
                         IdentityServerConstants.StandardScopes.Profile,
                     }
                 }
-
-                
             };
         }
-
-       
 
         public static List<TestUser> GetUsers()
         {
@@ -76,13 +85,24 @@ namespace HiQo.IdentityServer
                 {
                     SubjectId = "1",
                     Username = "alice",
-                    Password = "password"
+                    Password = "password",
+                    Claims = new []
+                    {
+                        new Claim("name", "Alice"),
+                        new Claim("website", "https://alice.com"),
+                        new Claim(ClaimTypes.Role,"Admin"), 
+                    }
                 },
                 new TestUser
                 {
                     SubjectId = "2",
                     Username = "bob",
-                    Password = "password1"
+                    Password = "password1",
+                    Claims = new []
+                    {
+                        new Claim("name", "Bob"),
+                        new Claim("website", "https://bob.com")
+                    }
                 }
             };
         }
