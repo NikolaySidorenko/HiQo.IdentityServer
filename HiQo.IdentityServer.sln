@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiQo.WebApi", "HiQo.WebApi\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiQo.ConsoleClient", "HiQo.ConsoleClient\HiQo.ConsoleClient.csproj", "{1EED5194-BB92-4C1D-93F6-0FF8AC37ACFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiQo.MvcClient", "HiQo.MvcClient\HiQo.MvcClient.csproj", "{725239A3-4216-43BA-8D6B-78A51EF3E364}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1EED5194-BB92-4C1D-93F6-0FF8AC37ACFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EED5194-BB92-4C1D-93F6-0FF8AC37ACFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EED5194-BB92-4C1D-93F6-0FF8AC37ACFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{725239A3-4216-43BA-8D6B-78A51EF3E364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{725239A3-4216-43BA-8D6B-78A51EF3E364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{725239A3-4216-43BA-8D6B-78A51EF3E364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{725239A3-4216-43BA-8D6B-78A51EF3E364}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

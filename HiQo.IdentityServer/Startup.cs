@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 
 namespace HiQo.IdentityServer
 {
@@ -34,11 +35,25 @@ namespace HiQo.IdentityServer
                 .AddTestUsers(Config.GetUsers());
 
             services.AddAuthentication().AddGoogle("Google", options =>
+            {
+                options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
+                options.ClientId = "408720144550-fbc33j0f18rv7kgiom6rogl0coua7bjb.apps.googleusercontent.com";
+                options.ClientSecret = "pMGcSHRFgagrs_r4FsQGCuEn";
+            })
+            .AddOpenIdConnect("oidc", "OpenID Connect", options =>
+            {
+                options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
+                options.SignOutScheme = IdentityServerConstants.SignoutScheme;
+
+                options.Authority = "https://demo.identityserver.io/";
+                options.ClientId = "implicit";
+
+                options.TokenValidationParameters = new TokenValidationParameters
                 {
-                    options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
-                    options.ClientId = "408720144550-fbc33j0f18rv7kgiom6rogl0coua7bjb.apps.googleusercontent.com";
-                    options.ClientSecret = "pMGcSHRFgagrs_r4FsQGCuEn";
-                });
+                    NameClaimType = "name",
+                    RoleClaimType = "role"
+                };
+            });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
